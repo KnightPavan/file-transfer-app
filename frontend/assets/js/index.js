@@ -15,7 +15,7 @@ const emailForm = document.querySelector('#emailForm')
 
 const toast = document.querySelector('.toast')
 
-const host = 'https://file-transfer-app-u14q.onrender.com'
+const host = 'https://file-transfer-app-u14q.onrender.com/'
 const uploadURL = `${host}api/files`
 const emailUrl = `${host}api/files/send`
 
