@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-export default function connectdb () {
+export default async function connectdb () {
   mongoose
     .connect(process.env.MONGO_URL, {})
     .then(() => {

@@ -1,7 +1,8 @@
 import { initializeApp } from 'firebase/app'
 import { getStorage } from 'firebase/storage'
 import dotenv from 'dotenv'
-dotenv.config()
+
+dotenv.config({path: "../.env"})
 
 const firebaseConfig = {
   apiKey: process.env.FB_API_KEY,
@@ -12,6 +13,7 @@ const firebaseConfig = {
   appId: process.env.FB_APP_ID,
   measurementId: process.env.FB_MEAUSREMENT_ID
 }
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig)
