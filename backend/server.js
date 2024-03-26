@@ -7,7 +7,6 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 import { download } from './routes/download.js'
 import cors from 'cors'
-
 dotenv.config()
 connectdb()
 
@@ -34,6 +33,7 @@ app.use(express.json())
 app.use('/api/files', files)
 app.use('/files', show)
 app.use('/files/download', download)
+
 
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {

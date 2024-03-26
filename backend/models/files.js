@@ -6,6 +6,8 @@ const filesSchema = new mongoose.Schema(
     path: { type: String, required: true },
     size: { type: Number, required: true },
     uuid: { type: String, required: true },
+    originalname: { type: String, required: true },
+    url: { type: String, required: true },
     sender: { type: String },
     receiver: { type: String }
   },
