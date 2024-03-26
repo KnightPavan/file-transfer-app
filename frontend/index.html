@@ -9,17 +9,59 @@
 </head>
 
 <body>
+
     <section class="upload-container">
-        <div class="drop-zone">
-            <div class="icon-container">
-                <img src="./assets/img/file.svg" alt="file icon" class="center" draggable="false">
-                <img src="./assets/img/file.svg" alt="file icon" class="left" draggable="false">
-                <img src="./assets/img/file.svg" alt="file icon" class="right" draggable="false">
+        <form action="">
+            <div class="drop-zone">
+                <div class="icon-container">
+                    <img src="./assets/img/file.svg" alt="file icon" class="center" draggable="false">
+                    <img src="./assets/img/file.svg" alt="file icon" class="left" draggable="false">
+                    <img src="./assets/img/file.svg" alt="file icon" class="right" draggable="false">
+                </div>
+                <input type="file" id="fileInput">
+                <div class="title">Drop your files here or, <span class="browseBtn">browse</span></div>
             </div>
-            <input type="file" id="fileInput">
-            <div class="title">Drop your files here or, <span class="browseBtn">browse</span></div>
+        </form>
+        <div class="progress-container">
+            <div class="bg-progress"></div>
+
+            <div class="inner-container">
+                <div class="status">Uploading...</div>
+                <div class="percent-container"><span class="percentage" id="progressPercent">0</span>%</div>
+                <div class="progress-bar"></div>
+            </div>
+
+        </div>
+        <div class="sharing-container">
+            <p class="expire">Link expires in 24 hrs</p>
+
+            <div class="input-container">
+                <input type="text" id="fileURL" readonly>
+                <img src="./assets/img/copy_icon.svg" alt="copy" id="copyURLBtn">
+            </div>
+
+            <p class="email-info">Or Send Via Email</p>
+
+            <div class="email-container">
+                <form id="emailForm">
+                    <div class="field">
+                        <label for="fromEmail">Your email</label>
+                        <input type="email" autocomplete="email" required name="from-email" required id="fromEmail">
+                    </div>
+
+                    <div class="field">
+                        <label for="toEmail">Receiver's email</label>
+                        <input type="email" autocomplete="receiver" name="to-email" required id="toEmail">
+                    </div>
+                    <div class="send-btn-container">
+                        <button type="submit">Send</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
+    <div class="image-vector"></div>
+    <div class="toast">Sample message</div>
     <script src="./assets/js/index.js"></script>
 </body>
 
