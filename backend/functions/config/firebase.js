@@ -1,8 +1,5 @@
 import { initializeApp } from 'firebase/app'
 import { getStorage } from 'firebase/storage'
-import dotenv from 'dotenv'
-
-dotenv.config({path: "../.env"})
 
 const firebaseConfig = {
   apiKey: process.env.FB_API_KEY,
