@@ -7,7 +7,8 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 import { download } from './routes/download.js'
 import cors from 'cors'
-dotenv.config()
+
+dotenv.config({path: './.env'})
 connectdb()
 
 const app = express()
